@@ -27,8 +27,21 @@ const socials = [
   },
 ];
 
+const internalLinks = [
+  {
+    url: "projects",
+    label: "Projects",
+  },
+  {
+    url: "contactme",
+    label: "Contact me",
+  },
+];
+
 const Header = () => {
-  const handleClick = (anchor) => () => {
+  const handleClick = (anchor) => (event) => {
+    // Prevent default anchor click behavior
+    event.preventDefault();
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -73,7 +86,20 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
+              {internalLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href=""
+                  onClick={handleClick(link.url)}
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    fontSize: "18px",
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
             </HStack>
           </nav>
         </HStack>
