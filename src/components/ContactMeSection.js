@@ -38,13 +38,13 @@ const LandingSection = () => {
       await submit("/api/contact", values);
 
       console.log(response);
-      if (response && response.type === "success") {
+      if (response && response.type == "success") {
         onOpen({
           title: "Success",
           description: response.message,
           status: "success",
         });
-        resetForm(); // Reset del form dopo il submit
+        resetForm();
       } else {
         onOpen({
           title: "Error",
@@ -52,7 +52,7 @@ const LandingSection = () => {
           status: "error",
         });
       }
-      setSubmitting(false); // Riattiva il pulsante dopo il submit
+      setSubmitting(false);
     },
   });
 
