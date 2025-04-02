@@ -39,7 +39,7 @@ const LandingSection = () => {
 
       console.log(response);
       if (response && response.type === "success") {
-        F({
+        onOpen({
           title: "Success",
           description: response.message,
           status: "success",
