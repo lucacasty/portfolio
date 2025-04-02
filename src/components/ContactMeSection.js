@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -21,6 +21,25 @@ const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
+  useEffect(() => {
+    if (response){
+      if(response.type == "success") {
+        onOpen({
+          title: "Success",
+          description: response.message,
+          status: "success",
+        });
+      } else {
+        onOpen({
+          title: "Error",
+          description: response.message,
+          status: "error",
+        });
+      }
+    } 
+  }, [response])
+  
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -34,25 +53,8 @@ const LandingSection = () => {
       type: Yup.string(),
       comment: Yup.string().required("Required").min(25, "Must be at least 25 characters"),
     }),
-    onSubmit: async (values, { setSubmitting, resetForm }) => {
-      await submit("/api/contact", values);
-
-      console.log(response);
-      if (response && response.type == "success") {
-        onOpen({
-          title: "Success",
-          description: response.message,
-          status: "success",
-        });
-        resetForm();
-      } else {
-        onOpen({
-          title: "Error",
-          description: response.message,
-          status: "error",
-        });
-      }
-      setSubmitting(false);
+    onSubmit: (values) => {
+      submit("/api/contact", values);
     },
   });
 
