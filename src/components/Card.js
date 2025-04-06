@@ -18,7 +18,7 @@ const Project = ({ title, description, imageSrc }) => {
         </Text>
       </CardBody>
       <CardFooter display="flex" gap="2">
-        <Button variant="solid" colorScheme="blue">
+        <Button variant="solid" colorScheme="blue" marginTop="5">
           See More
         </Button>
       </CardFooter>
