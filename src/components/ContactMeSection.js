@@ -24,17 +24,9 @@ const LandingSection = () => {
   useEffect(() => {
     if (response){
       if(response.type == "success") {
-        onOpen({
-          title: "Success",
-          description: response.message,
-          status: "success",
-        });
+        onOpen("success", response.message);
       } else {
-        onOpen({
-          title: "Error",
-          description: response.message,
-          status: "error",
-        });
+        onOpen("error", response.message);
       }
     } 
   }, [response])
