@@ -1,4 +1,5 @@
-import { Box, Button, Card, CardBody, CardFooter, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Card, CardBody, CardFooter } from "@chakra-ui/card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
@@ -7,15 +8,12 @@ const Project = ({ title, description, imageSrc }) => {
 
   return (
     <Card maxW="sm" overflow="hidden">
-      <Image
-        src={imageSrc}
-        alt={title}
-      />
+      <Image src={imageSrc} alt={title} />
       <CardBody>
         <Text fontSize="xl" fontWeight="bold">
           {title}
         </Text>
-        <Text color="gray.600">
+        <Text color="white">
           {description}
         </Text>
       </CardBody>
