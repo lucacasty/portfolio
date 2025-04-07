@@ -28,6 +28,7 @@ const LandingSection = () => {
       } else {
         onOpen("error", response.message);
       }
+      formik.resetForm();
     } 
   }, [response])
   
