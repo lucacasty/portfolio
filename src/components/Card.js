@@ -20,6 +20,9 @@ const Project = ({ title, description, imageSrc }) => {
       <CardFooter display="flex" gap="2">
         <Button variant="solid" colorScheme="blue" marginTop="5">
           See More
+          <Box as="span" ml="5px">
+            <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          </Box>
         </Button>
       </CardFooter>
     </Card>
