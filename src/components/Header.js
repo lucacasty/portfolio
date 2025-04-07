@@ -67,7 +67,7 @@ const Header = () => {
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
+          px={{base: 4, md: 16}}
           py={4}
           justifyContent="space-between"
           alignItems="center"
@@ -86,7 +86,7 @@ const Header = () => {
             ))}
           </nav>
           <nav>
-            <HStack spacing={8}>
+            <HStack spacing={8} display={{base: "none", md: "block"}}>
               {internalLinks.map((link, index) => (
                 <a
                   key={index}
