@@ -4,11 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Project = ({ title, description, imageSrc }) => {
-
+const Project = ({ title, description, imageSrc, url }) => {
   return (
     <Card maxW="sm" overflow="hidden">
-      <Image src={imageSrc} alt={title} />
+      <Image
+        src={imageSrc}
+        alt={title}
+        width="100%"
+        height="200px"
+        objectFit="contain"
+      />
       <CardBody>
         <Text fontSize="xl" fontWeight="bold">
           {title}
@@ -18,7 +23,15 @@ const Project = ({ title, description, imageSrc }) => {
         </Text>
       </CardBody>
       <CardFooter display="flex" gap="2">
-        <Button variant="solid" colorScheme="blue" marginTop="5">
+        <Button
+          as="a"
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="solid"
+          colorScheme="blue"
+          marginTop="5"
+        >
           See More
           <Box as="span" ml="5px">
             <FontAwesomeIcon icon={faArrowRight} size="1x" />
