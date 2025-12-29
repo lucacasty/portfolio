@@ -19,10 +19,11 @@ const projects = [
     url: "https://little-lemon-casty.web.app/",
   },
   {
-    title: "Photo Gallery",
+    title: "Gaming Hub",
     description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../images/photo3.jpg"),
+      "Gaming Hub is a comprehensive web application that serves as a central platform for gamers to explore, review, and discuss video games. It features user authentication, game reviews, ratings, and a community forum. That was my project for high-school final year. (Now is probably not working because heroku free plan is discontinued).",
+    getImageSrc: () => require("../images/gaming-hub.png"),
+    url: "https://gaming-hub-2k21.herokuapp.com/",
   },
 ];
 
