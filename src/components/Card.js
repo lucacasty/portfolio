@@ -18,7 +18,7 @@ const Project = ({ title, description, imageSrc, url }) => {
         <Text fontSize="xl" fontWeight="bold">
           {title}
         </Text>
-        <Text color="white">
+        <Text color="white" fontSize={{base: "sm", md: "md"}}>
           {description}
         </Text>
       </CardBody>

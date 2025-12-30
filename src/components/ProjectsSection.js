@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Gaming Hub",
     description:
-      "Gaming Hub is a comprehensive web application that serves as a central platform for gamers to explore, review, and discuss video games. It features user authentication, game reviews, ratings, and a community forum. That was my project for high-school final year. (Now is probably not working because heroku free plan is discontinued).",
+      "Gaming Hub is a web app for gamers to explore, review, and discuss games, featuring authentication, reviews, ratings, and a community forum. It was my high-school final year project (likely inactive now due to Heroku’s free plan discontinuation).",
     getImageSrc: () => require("../images/gaming-hub.png"),
     url: "https://gaming-hub-2k21.herokuapp.com/",
   },

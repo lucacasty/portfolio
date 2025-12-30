@@ -43,7 +43,7 @@ const ScreenshotsSection = () => {
         Gallery
       </Heading>
       <Box
-        maxW={{ base: "370px", md: "700px", lg: "1000px" }}
+        maxW={{ base: "350px", md: "700px", lg: "1000px" }}
         mx="auto"
       >
         <Swiper
