@@ -1,0 +1,26 @@
+.swiper {
+  width: 100%;
+  padding: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper {
+    padding: 20px;
+  }
+}
+
+/*.swiper-slide:nth-child(1n) {
+  background-color: rgb(49, 95, 18);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(12, 118, 218);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(138, 34, 34);
+}*/
+
+.swiper-slide-shadow {
+  border-radius: 18px;
+}

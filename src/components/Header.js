@@ -32,6 +32,10 @@ const internalLinks = [
     label: "Projects",
   },
   {
+    url: "screenshots",
+    label: "Gallery",
+  },
+  {
     url: "contactme",
     label: "Contact me",
   },
