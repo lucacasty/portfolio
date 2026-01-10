@@ -5,18 +5,25 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "Hair Day Salon",
-    description:
-      "Hair Day Salon is a simple and basic website created using only HTML and CSS as part of a Coursera course project. It represents a modern and welcoming hair salon offering professional styling, cuts, and color services tailored to your unique look.",
-    getImageSrc: () => require("../images/photo1.png"),
-    url: "https://hair-day-salon.web.app/",
-  },
-  {
     title: "Little Lemon",
     description:
       "Little Lemon is a React-based responsive web application developed as the final project for a Coursera front-end development course. It highlights core React principles and delivers an engaging user experience for a fictional restaurant.",
     getImageSrc: () => require("../images/photo2.png"),
     url: "https://little-lemon-casty.web.app/",
+  },
+  {
+    title: "Luca's chatbot",
+    description:
+      "Luca's Chatbot is an AI-powered virtual assistant designed to provide users with instant support and information. Built using groq apis, it leverages natural language processing to understand and respond to user queries effectively.",
+    getImageSrc: () => require("../images/chatbot.png"),
+    url: "https://test-chat-ia-43b56.web.app/",
+  },
+  {
+    title: "Hair Day Salon",
+    description:
+      "Hair Day Salon is a simple and basic website created using only HTML and CSS as part of a Coursera course project. It represents a modern and welcoming hair salon offering professional styling, cuts, and color services tailored to your unique look.",
+    getImageSrc: () => require("../images/photo1.png"),
+    url: "https://hair-day-salon.web.app/",
   },
   {
     title: "Gaming Hub",
