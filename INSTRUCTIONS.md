@@ -159,7 +159,13 @@ e) **Show an alert when the form is submitted successfully**.
 You need to listen to changes in the `response` object from the `useSubmit` hook. Also, when the form is submitted, a loading indicator should be shown in the Submit button. You can use the `isLoading` property from the `useSubmit` hook.
 
 The `useSubmit` hook is implemented in a way that 50% of the times it will return a successful response and 50% of the times it will return an error response.
+Note: To make the form actually send emails without setting up a backend you can use a form service like Formspree or EmailJS. Create a form on Formspree (https://formspree.io), copy your form endpoint (e.g. `https://formspree.io/f/YOUR_FORM_ID`) and set it in a `.env` file in the project root:
 
+```
+REACT_APP_FORM_URL=https://formspree.io/f/YOUR_FORM_ID
+```
+
+Then use `submit(process.env.REACT_APP_FORM_URL, values)` in `ContactMeSection.js` and restart the dev server.
 The `response` object from the API has 2 properties:
 - `type`: 'success' | 'error'
 - `message`: Extra contextual information about the response

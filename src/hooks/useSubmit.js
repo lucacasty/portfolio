@@ -11,22 +11,33 @@ const useSubmit = () => {
   const [response, setResponse] = useState(null);
 
   const submit = async (url, data) => {
-    const random = Math.random();
+    if (!url) {
+      setResponse({ type: 'error', message: 'Form URL not configured. Set REACT_APP_FORM_URL in your .env.'});
+      return;
+    }
+
     setLoading(true);
     try {
-      await wait(2000);
-      if (random < 0.5) {
-        throw new Error("Something went wrong");
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || 'Network response was not ok');
       }
+
       setResponse({
         type: 'success',
         message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
-      })
+      });
     } catch (error) {
       setResponse({
         type: 'error',
         message: 'Something went wrong, please try again later!',
-      })
+      });
     } finally {
       setLoading(false);
     }

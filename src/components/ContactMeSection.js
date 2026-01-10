@@ -47,7 +47,7 @@ const LandingSection = () => {
       comment: Yup.string().required("Required").min(25, "Must be at least 25 characters"),
     }),
     onSubmit: (values) => {
-      submit("/api/contact", values);
+      submit(process.env.REACT_APP_FORM_URL, values);
     },
   });
 
