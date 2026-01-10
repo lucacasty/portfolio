@@ -95,6 +95,12 @@ const LandingSection = () => {
               <Button type="submit" colorScheme="purple" width="full" isLoading={isLoading}>
                 Submit
               </Button>
+              {/* Download CV */}
+              <Button colorScheme="blue" width="full" onClick={() => {
+                window.open('https://drive.google.com/file/d/19K-nyC3Ij9_coV5McmIn58B9ymSJW4Dw/view?usp=sharing', '_blank');
+              }}>
+                Check CV
+              </Button>
             </VStack>
           </form>
         </Box>
