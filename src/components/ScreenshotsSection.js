@@ -38,6 +38,7 @@ const ScreenshotsSection = () => {
       alignItems="flex-start"
       spacing={8}
       id="screenshots-section"
+      pt={16}
     >
       <Heading as="h1">
         Gallery
